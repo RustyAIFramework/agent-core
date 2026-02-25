@@ -10,7 +10,7 @@
 pub use crate::agent::Agent;
 pub use crate::id::AgentId;
 pub use crate::identity::AgentIdentity;
-pub use crate::context::AgentContext;
+pub use crate::context::{AgentContext, OutgoingMessage};
 pub use crate::error::AgentError;
 pub use crate::result::AgentResult;
 pub use crate::lifecycle::AgentState;
