@@ -1,4 +1,4 @@
-/// Agent context for runtime information and messaging
+//! Agent context for runtime information and messaging
 
 use std::sync::{Arc, Mutex};
 use crate::AgentId;
