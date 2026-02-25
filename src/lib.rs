@@ -16,7 +16,7 @@ pub mod prelude;
 
 // Re-export commonly used items at the crate root
 pub use agent::Agent;
-pub use context::AgentContext;
+pub use context::{AgentContext, OutgoingMessage};
 pub use error::AgentError;
 pub use id::AgentId;
 pub use identity::AgentIdentity;
