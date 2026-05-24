@@ -3,7 +3,7 @@
 //! # Examples
 //!
 //! ```rust
-//! use agentropic_core::prelude::*;
+//! use z_core::prelude::*;
 //! ```
 
 // Re-export commonly used types and traits
