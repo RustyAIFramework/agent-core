@@ -1,12 +1,12 @@
 [package]
-name = "agentropic-core"
+name = "z-core"
 version = "0.1.0"
 edition = "2021"
-authors = ["Agentropic <agentropic@gmail.com>"]
+authors = ["ZeroicAI <devzeroicai@gmail.com>"]
 license = "MIT OR Apache-2.0"
 description = "Core primitives, traits, and abstractions for agent-oriented programming"
-repository = "https://github.com/agentropic/agentropic-core"
-documentation = "https://docs.rs/agentropic-core"
+repository = "https://github.com/zeroicai/z-core"
+documentation = "https://docs.rs/z-core"
 keywords = ["agents", "multi-agent", "aop", "autonomous"]
 categories = ["concurrency", "simulation"]
 

@@ -1,6 +1,6 @@
 // Define a concrete agent for testing
 
-use agentropic_core::prelude::*;
+use z_core::prelude::*;
 
 struct TestAgent {
     id: AgentId,

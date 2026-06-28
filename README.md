@@ -1,12 +1,12 @@
-# agentropic-core
+# z-core
 
-[![Crates.io](https://img.shields.io/crates/v/agentropic-core.svg)](https://crates.io/crates/agentropic-core)
-[![Documentation](https://docs.rs/agentropic-core/badge.svg)](https://docs.rs/agentropic-core)
+[![Crates.io](https://img.shields.io/crates/v/z-core.svg)](https://crates.io/crates/z-core)
+[![Documentation](https://docs.rs/z-core/badge.svg)](https://docs.rs/z-core)
 [![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](LICENSE)
 
 **Core primitives, traits, and abstractions for agent-oriented programming in Rust.**
 
-`agentropic-core` is the foundational crate of the Agentropic ecosystem, providing the building blocks for creating autonomous, intelligent agents. It defines agent identity, lifecycle management, core traits, and fundamental abstractions that all other Agentropic crates build upon.
+`z-core` is the foundational crate of the ZeroicAI ecosystem, providing the building blocks for creating autonomous, intelligent agents. It defines agent identity, lifecycle management, core traits, and fundamental abstractions that all other ZeroicAI crates build upon.
 
 ---
 
@@ -31,7 +31,7 @@ Every agent has a unique identity that enables:
 - Access control and permissions
 - Tracking and observability
 ```rust
-use agentropic_core::{AgentId, AgentIdentity};
+use z_core::{AgentId, AgentIdentity};
 
 let agent_id = AgentId::new();
 let identity = AgentIdentity::new(agent_id, "trading-agent");
@@ -41,7 +41,7 @@ let identity = AgentIdentity::new(agent_id, "trading-agent");
 
 The `Agent` trait is the fundamental interface all agents must implement:
 ```rust
-use agentropic_core::{Agent, AgentContext, AgentResult};
+use z_core::{Agent, AgentContext, AgentResult};
 
 #[async_trait]
 pub trait Agent: Send + Sync {
@@ -68,7 +68,7 @@ Agents follow a well-defined lifecycle:
 3. **Execute** → Main agent behavior runs
 4. **Shutdown** → Cleanup and graceful termination
 
-The lifecycle is managed by the runtime (see `agentropic-runtime`).
+The lifecycle is managed by the runtime (see `z-runtime`).
 
 ### Agent Context
 
@@ -114,12 +114,12 @@ The lifecycle is managed by the runtime (see `agentropic-runtime`).
 Add to your `Cargo.toml`:
 ```toml
 [dependencies]
-agentropic-core = "0.1.0"
+z-core = "0.1.0"
 ```
 
 ### Basic Agent Implementation
 ```rust
-use agentropic_core::{Agent, AgentId, AgentContext, AgentResult};
+use z_core::{Agent, AgentId, AgentContext, AgentResult};
 use async_trait::async_trait;
 
 pub struct SimpleAgent {
@@ -164,7 +164,7 @@ impl Agent for SimpleAgent {
 
 ## Architecture
 
-`agentropic-core` is designed to be:
+`z-core` is designed to be:
 
 - **Minimal**: Only fundamental abstractions, no opinions on implementation
 - **Extensible**: Traits allow for diverse agent types
@@ -175,18 +175,18 @@ impl Agent for SimpleAgent {
 
 ## 🔗 Related Crates
 
-- **[agentropic-messaging](../agentropic-messaging)** - Agent communication protocols
-- **[agentropic-cognition](../agentropic-cognition)** - Reasoning and decision-making
-- **[agentropic-runtime](../agentropic-runtime)** - Agent execution engine
-- **[agentropic](../agentropic)** - Batteries-included facade
+- **[z-messaging](../z-messaging)** - Agent communication protocols
+- **[z-cognition](../z-cognition)** - Reasoning and decision-making
+- **[z-runtime](../z-runtime)** - Agent execution engine
+- **[zeroicai](../zeroicai)** - Batteries-included facade
 
 ---
 
 ## Documentation
 
-Full API documentation is available on [docs.rs](https://docs.rs/agentropic-core).
+Full API documentation is available on [docs.rs](https://docs.rs/z-core).
 
-For guides and tutorials, see [agentropic-docs](https://github.com/agentropic/agentropic-docs).
+For guides and tutorials, see [z-docs](https://github.com/zeroicai/z-docs).
 
 ---
 
@@ -213,4 +213,4 @@ at your option.
 
 ---
 
-*Part of the [Agentropic](https://github.com/agentropic) ecosystem for agent-oriented programming in Rust.*
+*Part of the [ZeroicAI](https://github.com/zeroicai) ecosystem for agent-oriented programming in Rust.*
