@@ -1,12 +1,12 @@
-# z-core
+# agent-core
 
-[![Crates.io](https://img.shields.io/crates/v/z-core.svg)](https://crates.io/crates/z-core)
-[![Documentation](https://docs.rs/z-core/badge.svg)](https://docs.rs/z-core)
+[![Crates.io](https://img.shields.io/crates/v/agent-core.svg)](https://crates.io/crates/agent-core)
+[![Documentation](https://docs.rs/agent-core/badge.svg)](https://docs.rs/agent-core)
 [![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](LICENSE)
 
 **Core primitives, traits, and abstractions for agent-oriented programming in Rust.**
 
-`z-core` is the foundational crate of the ZeroicAI ecosystem, providing the building blocks for creating autonomous, intelligent agents. It defines agent identity, lifecycle management, core traits, and fundamental abstractions that all other ZeroicAI crates build upon.
+`agent-core` is the foundational crate of the RustyAI ecosystem, providing the building blocks for creating autonomous, intelligent agents. It defines agent identity, lifecycle management, core traits, and fundamental abstractions that all other RustyAI crates build upon.
 
 ---
 
@@ -31,7 +31,7 @@ Every agent has a unique identity that enables:
 - Access control and permissions
 - Tracking and observability
 ```rust
-use z_core::{AgentId, AgentIdentity};
+use agent_core::{AgentId, AgentIdentity};
 
 let agent_id = AgentId::new();
 let identity = AgentIdentity::new(agent_id, "trading-agent");
@@ -41,7 +41,7 @@ let identity = AgentIdentity::new(agent_id, "trading-agent");
 
 The `Agent` trait is the fundamental interface all agents must implement:
 ```rust
-use z_core::{Agent, AgentContext, AgentResult};
+use agent_core::{Agent, AgentContext, AgentResult};
 
 #[async_trait]
 pub trait Agent: Send + Sync {
@@ -68,7 +68,7 @@ Agents follow a well-defined lifecycle:
 3. **Execute** → Main agent behavior runs
 4. **Shutdown** → Cleanup and graceful termination
 
-The lifecycle is managed by the runtime (see `z-runtime`).
+The lifecycle is managed by the runtime (see `runtime`).
 
 ### Agent Context
 
@@ -114,12 +114,12 @@ The lifecycle is managed by the runtime (see `z-runtime`).
 Add to your `Cargo.toml`:
 ```toml
 [dependencies]
-z-core = "0.1.0"
+agent-core = "0.1.0"
 ```
 
 ### Basic Agent Implementation
 ```rust
-use z_core::{Agent, AgentId, AgentContext, AgentResult};
+use agent_core::{Agent, AgentId, AgentContext, AgentResult};
 use async_trait::async_trait;
 
 pub struct SimpleAgent {
@@ -164,7 +164,7 @@ impl Agent for SimpleAgent {
 
 ## Architecture
 
-`z-core` is designed to be:
+`agent-core` is designed to be:
 
 - **Minimal**: Only fundamental abstractions, no opinions on implementation
 - **Extensible**: Traits allow for diverse agent types
@@ -175,18 +175,18 @@ impl Agent for SimpleAgent {
 
 ## 🔗 Related Crates
 
-- **[z-messaging](../z-messaging)** - Agent communication protocols
-- **[z-cognition](../z-cognition)** - Reasoning and decision-making
-- **[z-runtime](../z-runtime)** - Agent execution engine
-- **[zeroicai](../zeroicai)** - Batteries-included facade
+- **[messaging](../messaging)** - Agent communication protocols
+- **[cognition](../cognition)** - Reasoning and decision-making
+- **[runtime](../runtime)** - Agent execution engine
+- **[rustyai](../rustyai)** - Batteries-included facade
 
 ---
 
 ## Documentation
 
-Full API documentation is available on [docs.rs](https://docs.rs/z-core).
+Full API documentation is available on [docs.rs](https://docs.rs/agent-core).
 
-For guides and tutorials, see [z-docs](https://github.com/zeroicai/z-docs).
+For guides and tutorials, see [docs](https://github.com/rustyai/docs).
 
 ---
 
@@ -213,4 +213,4 @@ at your option.
 
 ---
 
-*Part of the [ZeroicAI](https://github.com/zeroicai) ecosystem for agent-oriented programming in Rust.*
+*Part of the [RustyAI](https://github.com/rustyai) ecosystem for agent-oriented programming in Rust.*
