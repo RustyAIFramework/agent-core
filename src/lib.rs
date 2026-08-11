@@ -1,4 +1,4 @@
-//! # z-core
+//! # core
 //! Core primitives, traits, and abstractions for agent-oriented programming.
 
 

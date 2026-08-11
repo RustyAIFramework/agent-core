@@ -1,12 +1,12 @@
 [package]
-name = "z-core"
+name = "agent-core"
 version = "0.1.0"
 edition = "2021"
-authors = ["ZeroicAI <devzeroicai@gmail.com>"]
+authors = ["RustyAI <devrustyai@gmail.com>"]
 license = "MIT OR Apache-2.0"
 description = "Core primitives, traits, and abstractions for agent-oriented programming"
-repository = "https://github.com/zeroicai/z-core"
-documentation = "https://docs.rs/z-core"
+repository = "https://github.com/rustyai/agent-core"
+documentation = "https://docs.rs/agent-core"
 keywords = ["agents", "multi-agent", "aop", "autonomous"]
 categories = ["concurrency", "simulation"]
 

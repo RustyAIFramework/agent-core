@@ -3,7 +3,7 @@
 //! # Examples
 //!
 //! ```rust
-//! use z_core::prelude::*;
+//! use agent_core::prelude::*;
 //! ```
 
 // Re-export commonly used types and traits
