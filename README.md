@@ -186,7 +186,7 @@ impl Agent for SimpleAgent {
 
 Full API documentation is available on [docs.rs](https://docs.rs/agent-core).
 
-For guides and tutorials, see [docs](https://github.com/rustyai/docs).
+For guides and tutorials, see [docs](https://github.com/RustyAIFW/docs).
 
 ---
 
@@ -213,4 +213,4 @@ at your option.
 
 ---
 
-*Part of the [RustyAI](https://github.com/rustyai) ecosystem for agent-oriented programming in Rust.*
+*Part of the [RustyAI](https://github.com/RustyAIFW) ecosystem for agent-oriented programming in Rust.*
